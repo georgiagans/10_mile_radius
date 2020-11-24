@@ -1,0 +1,27 @@
+---
+title: "10 Mile Radius bruh"
+output:
+  html_document:
+    self_contained: TRUE
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Hi lisie
+
+```{r, message = FALSE}
+library(tidyverse)
+library(leaflet)
+```
+
+
+```{r}
+leaflet() %>%
+  addTiles() %>%
+  addCircles(lat = 42.32, lng = 287.36, radius = 16093.4, label = "lisie's 10 mile radius")
+```
+
+
